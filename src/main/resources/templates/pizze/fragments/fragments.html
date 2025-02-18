@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+
+</head>
+
+<body>
+    <a th:fragment="buttons(link, params)" 
+       th:href="@{${link}(query=${params})}" 
+       class="btn btn-outline-secondary d-flex justify-content-center">
+        Visualizza
+    </a>
+    <a th:fragment="button(link)" 
+       th:href="@{${link}}" 
+       class="btn btn-outline-secondary d-flex justify-content-center">
+       Home
+    </a>
+
+</body>
+
+</html>
