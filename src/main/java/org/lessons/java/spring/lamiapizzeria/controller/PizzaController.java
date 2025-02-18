@@ -27,7 +27,6 @@ public class PizzaController {
     @GetMapping("/pizza")
     public String seePizza(@RequestParam(name = "query") String query, Model model) {
         // Troviamo tutte le pizze che contengono il nome della query
-        // List<Pizza> pizze = pizzaRepository.findByNomeContaining(query);
         List<Pizza> pizze = pizzaRepository.findByNomeContaining(query);
 
         if (query.equals("") || query.equals("")) {
